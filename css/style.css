@@ -6,22 +6,32 @@
 }
 
 .container {
-  max-width: 1000px;
+  max-width: 900px;
   margin: 0 auto;
 }
 
 body {
-  background: lightblue;
+  background: #102436;
 }
 
 .title {
   text-align: center;
+  color: #5EC84C;
+  word-spacing: 5px;
+  margin-bottom: 10px;
+  margin-top: 25px;
+}
+
+h3 {
+  font-size: 16px;
 }
 
 /* primo blocco */
- .user-input {
-  border: solid 1px black;
+ #user-input {
   background: #fff;
+  border-radius: 10px;
+  box-shadow: 2px 2px 8px rgba(94, 200, 76, 0.6);
+  padding-bottom: 7px;
 }
 
 .data {
@@ -32,20 +42,53 @@ body {
 .data-item {
   display: flex;
   flex-direction: column;
-  padding: 15px;
   align-items: center;
+  padding: 25px;
+}
+
+#first-container {
+  margin-top: 30px;
 }
 
 #first-container a {
-  padding: 5px;
-  border: solid 1px black;
+  padding: 8px 12px;
+  background: rgba(16, 36, 54, 0.9);
   text-decoration: none;
+  border-radius: 5px;
+  color: #5EC84C;
+  margin: 5px;
 }
 
 .buttons {
   text-align: center;
   padding: 15px;
 }
+
+label {
+  color: #102436;
+  margin-bottom: 10px;
+}
+
+#name, #km {
+  border: solid 1px #5EC84C;
+  padding: 5px;
+  border-radius: 5px;
+  color: #102436;
+  background: #fff;
+}
+
+#age {
+  border: solid 1px #5EC84C;
+  padding: 4px;
+  border-radius: 5px;
+  color: #102436;
+    background: #fff;
+}
+
+#name:focus, #km:focus, #age:focus {
+  background: #5EC84C;
+}
+
 
 /* secondo blocco */
 #second-container {
@@ -58,27 +101,49 @@ body {
 
 #user-output {
   background: #fff;
-  border: solid 1px black;
+  box-shadow: -2px 2px 8px rgba(94, 200, 76, 0.6);
   padding: 15px;
+  border-radius: 10px;
+}
+
+#userName {
+  font-size: 19px;
 }
 
 .dati-biglietto {
   display: flex;
-}
-
-.nome-passeggero, .prezzo-biglietto {
-  border: solid 1px black;
+  border-top: solid 1px #102436;
+  border-bottom: solid 1px #102436;
 }
 
 .nome-passeggero {
-  flex-basis: 25%;
+  flex-basis: 30%;
+  background: #5EC84C;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.nome-passeggero h3 {
+  text-align: center;
 }
 
 .prezzo-biglietto {
-  flex-basis: 75%;
+  flex-basis: 70%;
   display: flex;
+  justify-content: center;
 }
 
 .prezzo-item {
-  padding: 15px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.prezzo-item h4 {
+  margin-bottom: 30px;
 }
