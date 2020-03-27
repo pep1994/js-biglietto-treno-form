@@ -48,6 +48,14 @@ body {
 }
 
 /* secondo blocco */
+#second-container {
+  opacity: 0;
+}
+
+#second-container.visible {
+  opacity: 1;
+}
+
 #user-output {
   background: #fff;
   border: solid 1px black;
