@@ -17,8 +17,10 @@ ageU = document.getElementById('age');
 gButton = document.getElementById('genera');
 aButton = document.getElementById('annulla');
 
-// imposto di default il valore vuoto per l'input della fascia d'età
+// imposto di default il valore vuoto per gli input
 ageU.value = "";
+nameU.value = "";
+kmU.value = "";
 
 // dico al bottone genera di restare in "ascolto" e cosa deve accadere all'evento click
 
@@ -43,35 +45,48 @@ gButton.addEventListener('click',
       totPrice = price;
     }
 
+    // se il valore inserito nell'input dei km da percorrere non è un numero allora il programma lo segnalerà all'utente forzandolo a reinserire il valore
 
-    // creo un numero casuale da 1 a 10 che corrisponderà al numero della cabina
-    nCab = Math.floor(Math.random() * 10 + 1);
+    if (isNaN(kmValue)) {
+      alert("Il valore dei km da percorrere non è corretto, è pregato di inserire un valore che sia un numero. Grazie!");
+      nameValue = "";
+      kmValue = "";
+      ageValue = "";
+
+      document.getElementById('second-container').classList.remove('visible');
+      document.getElementById('km').value = kmValue;
+
+    } else {
+      // creo un numero casuale da 1 a 10 che corrisponderà al numero della cabina
+      nCab = Math.floor(Math.random() * 10 + 1);
 
 
-    // creo un numero casuale che corrisponderà al codice cp della cabina
-    codeCab = Math.round(Math.random() * 99000 + 1000);
+      // creo un numero casuale che corrisponderà al codice cp della cabina
+      codeCab = Math.round(Math.random() * 99000 + 1000);
 
 
-    // output nome utente sul biglietto
-    document.getElementById('userName').innerHTML = nameValue;
+      // output nome utente sul biglietto
+      document.getElementById('userName').innerHTML = nameValue;
 
-    // output offerta sul biglietto
-    document.getElementById('type-ticket').innerHTML = ageValue;
+      // output offerta sul biglietto
+      document.getElementById('type-ticket').innerHTML = ageValue;
 
-    // output nome utente sul biglietto
-    document.getElementById('userName').innerHTML = nameValue;
+      // output nome utente sul biglietto
+      document.getElementById('userName').innerHTML = nameValue;
 
-    // output nome utente sul biglietto
-    document.getElementById('ticket-price').innerHTML = totPrice.toFixed(2) + "€";
+      // output nome utente sul biglietto
+      document.getElementById('ticket-price').innerHTML = totPrice.toFixed(2) + "€";
 
-    // output numero cabina sul biglietto
-    document.getElementById('number-cab').innerHTML = nCab;
+      // output numero cabina sul biglietto
+      document.getElementById('number-cab').innerHTML = nCab;
 
-    // output codice cp cabina sul biglietto
-    document.getElementById('code-ticket').innerHTML = codeCab;
+      // output codice cp cabina sul biglietto
+      document.getElementById('code-ticket').innerHTML = codeCab;
 
-    // aggiunta di una classe al secondo blocco in modo da farlo comparire al click sul bottone
-    document.getElementById('second-container').className = "visible"
+      // aggiunta di una classe al secondo blocco in modo da farlo comparire al click sul bottone
+      document.getElementById('second-container').className = "visible";
+
+    }
 
   });
 
