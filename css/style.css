@@ -1,0 +1,48 @@
+/* general */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+body {
+  background: lightblue;
+}
+
+.title {
+  text-align: center;
+}
+
+/* primo blocco */
+ .user-input {
+  border: solid 1px black;
+  background: #fff;
+}
+
+.data {
+  display: flex;
+  justify-content: center;
+}
+
+.data-item {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  align-items: center;
+}
+
+#first-container a {
+  padding: 5px;
+  border: solid 1px black;
+  text-decoration: none;
+}
+
+.buttons {
+  text-align: center;
+  padding: 15px;
+}
