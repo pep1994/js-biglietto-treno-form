@@ -46,3 +46,31 @@ body {
   text-align: center;
   padding: 15px;
 }
+
+/* secondo blocco */
+#user-output {
+  background: #fff;
+  border: solid 1px black;
+  padding: 15px;
+}
+
+.dati-biglietto {
+  display: flex;
+}
+
+.nome-passeggero, .prezzo-biglietto {
+  border: solid 1px black;
+}
+
+.nome-passeggero {
+  flex-basis: 25%;
+}
+
+.prezzo-biglietto {
+  flex-basis: 75%;
+  display: flex;
+}
+
+.prezzo-item {
+  padding: 15px;
+}
