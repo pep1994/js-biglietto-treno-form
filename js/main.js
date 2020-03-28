@@ -3,10 +3,35 @@ L'utente inserisce negli input il proprio nome, i km che deve percorrere e la fa
 */
 
 // dichiarazione variabili
-var nameU, kmU, ageU, gButton, aButton, nameValue, kmValue, ageValue, price, totPrice, nCab, codeCab;
+var nameU, kmU, ageU, gButton, aButton, nameValue, kmValue, ageValue, price, totPrice, nCab, codeCab, logoButton, trainToLeft, logoToLeft, title, fadeContainer;
 var basePrice = 0.21; // variabile che rappresenta il prezzo al kilometro
 var scontoMinori = 20 / 100; // variabile che rappresenta lo sconto per i minorenni
 var scontoOver65 = 40 / 100; // variabile che rappresenta lo sconto per gli Over65
+
+
+// al click sul logo boolean parte un treno che porta via il logo, lo sfondo diventa blu, appare il titolo e il programma che genererà il biglietto del treno
+logoButton = document.getElementById('logo');
+trainToLeft = document.getElementById('train2');
+logoToLeft = document.getElementById('logo-move');
+title = document.getElementById('title-container');
+fadeContainer = document.getElementById('first-container');
+
+
+console.log(trainToLeft);
+
+logoButton.addEventListener('click',
+
+  function() {
+    trainToLeft.className = "train-to-left";
+    logoToLeft.className = "logo-to-left";
+    logoButton.classList.toggle("logo-animate");
+    document.getElementById('body').className = "color";
+    title.className = "title-animate";
+    fadeContainer.className = "fade-in";
+
+  });
+
+
 
 
 // dico alle variabili di salvarsi il riferimento a quell'Id e di tenerlo in memoria
@@ -23,7 +48,6 @@ nameU.value = "";
 kmU.value = "";
 
 // dico al bottone "genera" di restare in "ascolto" e cosa deve accadere all'evento click
-
 gButton.addEventListener('click',
 
   function() {

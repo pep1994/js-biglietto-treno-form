@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-size: 20px;
 }
 
 .container {
@@ -11,7 +12,14 @@
 }
 
 body {
-  background: #102436;
+  background: #fff;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  height: 100vh;
+}
+
+.color {
+  animation: background-body 3s 2.5s forwards;
 }
 
 .title {
@@ -20,6 +28,10 @@ body {
   word-spacing: 5px;
   margin-bottom: 10px;
   margin-top: 25px;
+}
+
+h2 {
+  font-size: 25px;
 }
 
 h3 {
@@ -48,6 +60,9 @@ h3 {
 
 #first-container {
   margin-top: 30px;
+  opacity: 0;
+  transform: translateY(-300px);
+  position: relative;
 }
 
 #first-container a {
@@ -57,6 +72,13 @@ h3 {
   border-radius: 5px;
   color: #5EC84C;
   margin: 5px;
+}
+
+#logo-small {
+  width: 50px;
+  position: absolute;
+  top: 40px;
+  left: 5px;
 }
 
 .buttons {
@@ -82,11 +104,17 @@ label {
   padding: 4px;
   border-radius: 5px;
   color: #102436;
-    background: #fff;
+  background: #fff;
 }
 
-#name:focus, #km:focus, #age:focus {
+#name:focus,
+#km:focus,
+#age:focus {
   background: #5EC84C;
+}
+
+.fade-in {
+  animation: fade-in 1.5s 8s forwards;
 }
 
 
@@ -146,4 +174,232 @@ label {
 
 .prezzo-item h4 {
   margin-bottom: 30px;
+}
+
+/* titolo */
+#title-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+
+#title-container h1 {
+  color: #fff;
+  font-size: 55px;
+}
+
+#title-container h1 span {
+  color: #5EC84C;
+  font-size: 28px;
+}
+
+#title-container.title-animate {
+  animation: title 5s 4s forwards;
+}
+
+
+/* immagine treno e logo */
+#train {
+  width: 390px;
+  position: absolute;
+  top: 51%;
+  left: -250px;
+  animation: train 7s forwards;
+  transform: translateX(0);
+}
+
+#train2 {
+  width: 390px;
+  position: absolute;
+  top: 51%;
+  right: -400px;
+  transform: translateX(0);
+}
+
+.train-to-left {
+  animation: train2 4s forwards;
+}
+
+.img-container {
+  transform: translateY(-50%);
+  position: absolute;
+  top: 50%;
+  left: -250px;
+  animation: logo 7s forwards;
+}
+
+.logo-to-left {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  animation: logo-to-left 2s 2s forwards;
+}
+
+.logo-boolean {
+  width: 250px;
+  cursor: pointer;
+}
+
+.logo-animate {
+  animation: logo-scale 2.5s 5.5s infinite linear;
+}
+
+/* keyframes */
+@keyframes train {
+
+  0% {
+    top: 51%;
+    left: -250px;
+    transform: translateX(0);
+  }
+
+  70% {
+    top: 51%;
+    left: 54%;
+    transform: translateX(-50%);
+  }
+
+  100% {
+    top: 51%;
+    left: 120%;
+    transform: translateX(0);
+  }
+}
+
+@keyframes train2 {
+
+  0% {
+    top: 51%;
+    right: -250px;
+    transform: translateX(0);
+  }
+
+  50% {
+    top: 51%;
+    right: 43%;
+    transform: translateX(0);
+  }
+
+  100% {
+    top: 51%;
+    right: 120%;
+    transform: translateX(0);
+  }
+}
+
+@keyframes logo-to-left {
+
+  0% {
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+  }
+
+  100% {
+    top: 50%;
+    left: -30%;
+    transform: translateY(-50%);
+  }
+}
+
+
+@keyframes logo {
+
+  0% {
+    top: 50%;
+    left: -250px;
+    transform: translateY(-50%) translateX(0) ;
+  }
+
+  70% {
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%) ;
+  }
+
+  100% {
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%) ;
+  }
+}
+
+@keyframes logo-scale {
+
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.5);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes background-body {
+
+  0% {
+    background: #fff;
+  }
+
+  100% {
+    background: #102436;
+  }
+}
+
+@keyframes title {
+
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+  }
+
+  50% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(2);
+    top: 50%;
+    left: 50%;
+  }
+
+  70% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(2);
+    top: 50%;
+    left: 50%;
+  }
+
+  85% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(2) rotate(-360deg);
+    top: 50%;
+    left: 50%;
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(2) rotate(-360deg);
+    top: -100px;
+    left: 120%;
+  }
+}
+
+@keyframes fade-in {
+
+  0% {
+    opacity: 0;
+    transform: translateY(-300px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

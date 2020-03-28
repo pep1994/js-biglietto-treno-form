@@ -4,11 +4,18 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>BooleanTrain</title>
+
     <link rel="stylesheet" href="css/style.css">
   </head>
-  <body>
+  <body id="body">
 
     <div class="container">
+
+      <!-- titolo -->
+      <div id="title-container">
+        <h1>Boolean<span>Train</span></h1>
+      </div>
+
 
       <!-- primo blocco -->
       <div id="first-container">
@@ -23,7 +30,7 @@
             </div>
             <div class="data-item">
               <label for="km">Km da percorrere</label>
-              <input id="km" type="number" name="user_km" value="" >
+              <input id="km" type="number" name="user_km" value="" placeholder="km...">
             </div>
             <div class="data-item">
               <label for="age">Fascia d'età</label>
@@ -39,7 +46,9 @@
             <a id="annulla" href="#">Annulla</a>
           </div>
         </div>
+        <img id="logo-small" src="img/logo-small.png" alt="logo-boolean">
       </div>
+
 
       <!-- secondo blocco -->
       <div id="second-container">
@@ -75,6 +84,15 @@
         </div>
       </div>
     </div>
+
+
+    <!-- logo -->
+    <div id="logo-move" class="img-container">
+      <img id="logo" src="img/logo.png" alt="logo" class="logo-boolean logo-animate">
+    </div>
+    <img id="train" src="img/train.png" alt="train">
+    <img id="train2" src="img/train2.png" alt="train" class="ciao">
+
 
     <script type="text/javascript" src="js/main.js"></script>
   </body>
